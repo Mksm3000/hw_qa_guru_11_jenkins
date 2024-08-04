@@ -7,9 +7,9 @@ class RegistrationPage:
     def open(self):
         browser.open('automation-practice-form')
 
-        # уменьшаем масштаб страницы до 65%
-        browser.driver.execute_script(
-            "document.querySelector('.body-height').style.transform='scale(.45)'")
+        # # уменьшаем масштаб страницы до 65%
+        # browser.driver.execute_script(
+        #     "document.querySelector('.body-height').style.transform='scale(.45)'")
 
         browser.all('[id^=google_ads][id$=container__]').with_(timeout=10).wait_until(
             have.size_greater_than_or_equal(3))
