@@ -14,7 +14,7 @@ def load_env():
     load_dotenv()
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='function', autouse=True)
 def browser_management():
     browser.config.base_url = "https://demoqa.com/"
     selenoid_login = os.getenv("SELENOID_LOGIN")
